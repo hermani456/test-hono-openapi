@@ -1,0 +1,33 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "lint --fix"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.2",
+    "@hono/zod-openapi": "^0.19.6",
+    "dotenv": "^16.5.0",
+    "dotenv-expand": "^12.0.2",
+    "hono": "^4.7.10",
+    "hono-pino": "^0.8.0",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0",
+    "stoker": "^1.4.2",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
+    "@types/node": "^20.11.17",
+    "eslint": "^9.27.0",
+    "eslint-plugin-format": "^1.0.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
+  }
+}
