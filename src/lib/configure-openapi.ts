@@ -1,4 +1,5 @@
 import type { AppOpenAPI } from './types.js'
+import { Scalar } from '@scalar/hono-api-reference'
 import packageJson from '../../package.json' with { type: 'json' }
 
 export default function configureOpenAPI(app: AppOpenAPI) {
@@ -9,4 +10,16 @@ export default function configureOpenAPI(app: AppOpenAPI) {
       title: packageJson.name,
     },
   })
+
+  app.get(
+    '/scalar',
+    Scalar({
+      url: '/doc',
+      theme: 'kepler',
+      defaultHttpClient: {
+        targetKey: 'node',
+        clientKey: 'fetch',
+      },
+    }),
+  )
 }

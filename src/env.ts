@@ -16,8 +16,7 @@ export type Env = z.infer<typeof EnvSchema>
 const env: Env = (() => {
   try {
     return EnvSchema.parse(process.env)
-  }
-  catch (e) {
+  } catch (e) {
     const error = e as z.ZodError
     console.error('Environment variables validation error:', error.errors)
     console.error(error.flatten().fieldErrors)

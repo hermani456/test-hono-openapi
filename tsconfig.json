@@ -8,9 +8,7 @@
       "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "strict": true,
     "outDir": "./dist",
     "esModuleInterop": true,
